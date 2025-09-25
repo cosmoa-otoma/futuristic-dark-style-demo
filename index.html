@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic-tech-style-site</title>
+    <link rel="icon" href="https://i.imgur.com/c3SEYUk.png">
+  <link rel="stylesheet" crossorigin href="/futuristic-dark-style-demo/assets/index-DfunKuNq.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>OTOMA</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="products.html" class="nav-link" data-section="products">Products</a>
+                <a href="#benefits" class="nav-link" data-section="benefits">Benefits</a>
+                <a href="#testimonials" class="nav-link" data-section="testimonials">Reviews</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Elevate Your Business Journey</h1>
+                <p class="hero-subtitle">Enhance your business preneur by further improving your branding as a business.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('products')">Shop Now</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('benefits')">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.imgur.com/0CbF2ea.png" alt="Sleek Laptop">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Premium Product Range</h2>
+                <p>Scientifically formulated supplements for every fitness goal</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/6c30747830db4322bcd1f1f5e363787c~.jpeg" alt="Protein Powder">
+                    <div class="product-info">
+                        <h3>Active 12</h3>
+                        <p>Premium whey protein isolate for muscle growth and recovery</p>
+                        <div class="product-price">$49.99</div>
+                        <button class="btn btn-primary product-btn" onclick="openLink('https://www.tokopedia.com/moonmate/moonmate-dada-ayam-siap-saji-mooyam-12-packs-high-protein-low-garam-gula-1731229829148477248?extParam=src%3Dshop%26whid%3D18733152&aff_unique_id=&channel=others&chain_key=')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/5d233052c2294ba684faff78905e94fd~.jpeg" alt="Pre-Workout">
+                    <div class="product-info">
+                        <h3>Mega 60</h3>
+                        <p>High-performance pre-workout for explosive energy and focus</p>
+                        <div class="product-price">$39.99</div>
+                        <button class="btn btn-primary product-btn" onclick="openLink('https://www.tokopedia.com/moonmate/moonmate-dada-ayam-siap-saji-mooyam-60-pcs-high-protein-low-garam-gula-cocok-untuk-diet-1731159978782852928?extParam=src%3Dshop%26whid%3D13676599&aff_unique_id=&channel=others&chain_key=')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.tokopedia.net/img/cache/700/aphluv/1997/1/1/ea77390c10334bb5bf57dc9f654d1879~.jpeg" alt="Recovery">
+                    <div class="product-info">
+                        <h3>Master 30</h3>
+                        <p>Advanced recovery formula for faster muscle repair and growth</p>
+                        <div class="product-price">$34.99</div>
+                        <button class="btn btn-primary product-btn" onclick="openLink('https://www.tokopedia.com/moonmate/mooyam-moonmate-official-mooyam-mix-dada-ayam-protein-master-30-packs-1-menit-siap-saji-instan-30-paket-mix-master-ready-meal-1731346556748990272?extParam=src%3Dshop%26whid%3D13676599&aff_unique_id=&channel=others&chain_key=')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Pricing</h2>
+                <p>Choose the perfect plan for your fitness journey</p>
+            </div>
+            <div class="price-filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="protein">Proteins</button>
+                <button class="filter-btn" data-category="preworkout">Pre-Workout</button>
+                <button class="filter-btn" data-category="vitamins">Vitamins</button>
+            </div>
+            <div class="price-list" id="priceList">
+                <!-- Products will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose OTOMA?</h2>
+                <p>Premium quality meets proven results</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧪</div>
+                    <h3>Lab Tested</h3>
+                    <p>Every product is rigorously tested for purity, potency, and quality in certified laboratories.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Proven Results</h3>
+                    <p>Backed by scientific research and trusted by thousands of athletes worldwide.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Acting</h3>
+                    <p>Advanced formulations designed for rapid absorption and immediate results.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>Natural Ingredients</h3>
+                    <p>Premium natural ingredients sourced from the finest suppliers around the globe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real results from real people</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"OTOMA transformed my conversions completely. .... "</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Sarah M.">
+                            <div>
+                                <h4>Sarah M.</h4>
+                                <span>F&B Business Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"One of the services I've ever used. ...."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Mike T.">
+                            <div>
+                                <h4>Mike T.</h4>
+                                <span>Supplements Business Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The better side of the internet and uh. ...."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Jessica L.">
+                            <div>
+                                <h4>Jessica L.</h4>
+                                <span>Nail Artist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Ready to Transform Your Fitness?</h2>
+                    <p>Get in touch with our experts for personalized supplement recommendations and exclusive offers.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong> support@OTOMA.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone:</strong> 1-800-OTOMA-1
+                        </div>
+                        <div class="contact-item">
+                            <strong>Hours:</strong> Mon-Fri 9AM-6PM EST
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="interest" name="interest" required>
+                            <option value="">Select Your Interest</option>
+                            <option value="muscle-gain">Muscle Gain</option>
+                            <option value="weight-loss">Weight Loss</option>
+                            <option value="endurance">Endurance</option>
+                            <option value="recovery">Recovery</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tell us about your fitness goals" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OTOMA</h3>
+                    <p>Elevating Your Business Journey</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#" onclick="showModal('shipping')">Shipping Info</a></li>
+                        <li><a href="#" onclick="showModal('returns')">Returns</a></li>
+                        <li><a href="#" onclick="showModal('faq')">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OTOMA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cart-modal')">&times;</span>
+            <h3>Added to Cart!</h3>
+            <p id="cart-message"></p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeModal('cart-modal')">Continue Shopping</button>
+                <button class="btn btn-primary" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modals -->
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('info-modal')">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
